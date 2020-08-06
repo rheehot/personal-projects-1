@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!--    CSS link    -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="CSS/styles.css">
+    <!--    Jquery Import   -->
+    <script src= "https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+        function q1() {
+            // 여기에 코드를 입력하세요
+            $.ajax({
+                type: "GET",
+                url: "http://openapi.data.go.kr/openapi/service/rest/Covid19/getCovid19InfStateJson?serviceKey=4cCrWcBqfj9bLgFYojl6nwCygaR%2FuhmAY%2FFK1c1RuOV3nr3ELtnCpBjN5vGM12JhNiOvnRAB%2B%2BEbAEgJZzRJWw%3D%3D&pageNo=1&numOfRows=10&startCreateDt=20200310&endCreateDt=20200315&_type=json",
+                data: {},
+                success: function (response) {
+                    let items = response['header']
+                    console.log(items)
+                    // let temp_html = ``
+                    // for (let i = 0; i < items.length; i++) {
+                    //     let decide = items[i]['decideCnt']
+                    // } console.log(decide);
+
+
+                }
+            });
+        }
+
+    </script>
+</head>
+<body>
+<div id="main" class="wrap">
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+            <h2 class="display-5">대한민국 확진자 현황</h2>
+        </div>
+    </div>
+    <ul class="list-group">
+        <li class="list-group-item disabled">기준일 : 2020년 1월 27일</li>
+        <li class="list-group-item">기준시간 : 17:30</li>
+    </ul>
+
+    <div class="contents">
+        <ul>
+            <li>
+                <div class="card text-white bg-primary mb-3" style="width: 100%;">
+                    <div class="card-header">확진자</div>
+                    <div class="card-body">
+                        <h5 class="card-title">50명</h5>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="card text-white bg-primary mb-3" style="width: 100%;">
+                    <div class="card-header">격리해제</div>
+                    <div class="card-body">
+                        <h5 class="card-title">60명</h5>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="card text-white bg-primary mb-3" style="width: 100%;">
+                    <div class="card-header">사망자</div>
+                    <div class="card-body">
+                        <h5 class="card-title">70명</h5>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <button onclick="q1()">업데이트</button>
+
+
+</div>
+</body>
+</html>

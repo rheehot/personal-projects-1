@@ -1,0 +1,65 @@
+
+
+.wrap {
+    width: 500px;
+    margin: 0 auto 0 auto;
+    color: black;
+}
+
+.wrap h2 {
+    text-align: center;
+}
+
+.wrap ul {
+    list-style: none;
+    padding: 0;
+}
+
+
+
+.wrap table {
+    width: 100%;
+}
+
+.wrap table tr {
+    text-align: center;
+}
+
+
+.jumbotron {
+    padding: 0;
+    margin: 0;
+}
+
+.contents {
+    padding: 0;
+    margin: 0;
+}
+.contents ul {
+    width: 500px;
+    margin: 0;
+
+
+}
+
+.contents ul li {
+    display: inline-block;
+    width: 150px;
+    height: 150px;
+    margin: 0 10px 0 10px;
+    text-align: center;
+}
+
+.contents ul li:first-child {
+    margin-right: 0;
+}
+
+.contents ul li:last-child {
+    margin-left: 0;
+}
+
+
+
+.contents {
+    text-align: left;
+}
