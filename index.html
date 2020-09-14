@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>회원가입</title>
+    <link rel="stylesheet" href="CSS/styles.css">
+    <link rel="stylesheet" href="CSS/default.css">
+    <script src="script/index.js"></script>
+</head>
+
+<body>
+<section class="login">
+    <div id="container" role="main">
+        <div id="content">
+            <h2 class="hide">회원가입</h2>
+            <div class="join_content">
+                <!-- 아이디 & 비밀번호 입력 -->
+                <div class="group">
+                    <div class="row_group">
+                        <h3 class="join_title">
+                            <label for="id">아이디</label>
+                        </h3>
+                        <span class="id">
+                            <input type="text" id="id">
+                        </span>
+                    </div>
+                </div>
+                <div class="group">
+                    <div class="row_group">
+                        <h3 class="join_title">
+                            <label for="password">비밀번호</label>
+                        </h3>
+                        <span class="password">
+                            <input type="password" id="password">
+                        </span>
+                    </div>
+                </div>
+                <div class="group">
+                    <div class="row_group">
+                        <h3 class="join_title">
+                            <label for="name">이름</label>
+                        </h3>
+                        <span class="name">
+                            <input type="name" id="name">
+                        </span>
+                    </div>
+                </div>
+                <div class="group">
+                    <div class="row_group">
+                        <h3 class="join_title">
+                            <label for="yy">생년월일</label>
+                        </h3>
+                        <span>
+                            <input type="text" id="yy" placeholder="YYYY/MM/DD">
+                        </span>
+                    </div>
+                </div>
+                <div class="group">
+                    <div class="row_group">
+                        <h3 class="join_title">
+                            <label for="phone">휴대전화</label>
+                        </h3>
+                        <span class="phone">
+                            <input type="phone" id="phone">
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button type="button" onclick="account_check()">회원가입</button>
+</section>
+</body>
+</html>
