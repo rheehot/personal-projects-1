@@ -82,7 +82,11 @@ table tr td:nth-child(2) {
 }
 
 
-.write {
+.write{
     text-align: right;
     margin-right: 20px;
+}
+
+form {
+    display: inline;
 }

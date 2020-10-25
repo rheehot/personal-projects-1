@@ -17,7 +17,7 @@
     <table class="table">
         <tr>
             <th class="table_num">번호</th>
-            <th class="table_contents">내용</th>
+            <th class="table_contents">제목</th>
             <th class="table_writer">작성자</th>
             <th class="table_date">작성일</th>
         </tr>
@@ -25,8 +25,8 @@
         <tr>
             <td>{{data[0]}}</td>
             <td>{{data[1]}}</td>
-            <td>{{data[2]}}</td>
             <td>{{data[3]}}</td>
+            <td>{{data[4]}}</td>
         </tr>
         {% endfor %}
     </table>
@@ -42,7 +42,7 @@
         </ul>
     </div>
     <div class="write">
-        <button class="btn_write">글쓰기</button>
+        <form action="/write"><button class="btn_write">글쓰기</button></form>
     </div>
 
 
