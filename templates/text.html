@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/static/text_styles.css">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='text_styles.css') }}" />
+    <title>Python-board</title>
+</head>
+
+<body>
+    <table>
+        <tr>
+            <td class="fixed">제목</td>
+            <!-- index form 의 id값을 가져와서 제목을 넣어야함? -->
+            <td class="data">제목을 넣어주세요</td>
+        </tr>
+        <tr>
+            <td class="fixed">작성자</td>
+            <td class="data">김순태</td>
+        </tr>
+        <tr>
+            <td class="fixed">작성일</td>
+            <td class="data">2020/10/24</td>
+        </tr>
+        <tr>
+            <td class="board_text">본문</td>
+            <td class="data">안녕하세요 김순태입니다.</td>
+        </tr>
+    </table>
+</body>
+
+</html>
