@@ -11,9 +11,9 @@
 
 <body>
     <h1 class="title">글 남겨라!!</h1>
-    <div>
+    <!-- <div>
         <form action="/login"><button>로그인</button></form>
-    </div>
+    </div> -->
     <div class="search_box">
         <input type="text" required name="word"><button>검색</button>
     </div>
@@ -27,7 +27,7 @@
         {% for data in data_list %}
         <tr id="{{data[0]}}">
             <td>{{data[0]}}</td>
-            <td>{{data[1]}}</td>
+            <td><a href="/view?id={{data[0]}}" id="{{data[0]}}">{{data[1]}}</a></td>
             <td>{{data[3]}}</td>
             <td>{{data[4]}}</td>
         </tr>

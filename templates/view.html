@@ -2,9 +2,9 @@
 <html lang="ko">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="/static/text_styles.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="/static/text_styles.css" />
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='text_styles.css') }}" />
     <title>Python-board</title>
 </head>
@@ -14,21 +14,22 @@
         <tr>
             <td class="fixed">제목</td>
             <!-- index form 의 id값을 가져와서 제목을 넣어야함? -->
-            <td class="data">{{view_text}}</td>
+            <td class="data">{{title}}</td>
         </tr>
         <tr>
             <td class="fixed">작성자</td>
-            <td class="data">김순태</td>
+            <td class="data">{{writer}}</td>
         </tr>
         <tr>
             <td class="fixed">작성일</td>
-            <td class="data">2020/10/24</td>
+            <td class="data">{{sub_date}}</td>
         </tr>
         <tr>
             <td class="board_text">본문</td>
-            <td class="data">{{view_text}}</td>
+            <td class="data">{{contents}}</td>
         </tr>
     </table>
+    <a href="/"><button>목록보기</button></a>
 </body>
 
 </html>
