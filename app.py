@@ -1,4 +1,4 @@
-from bs4.element import SoupStrainer
+from bs4.element import ResultSet, SoupStrainer
 from flask import Flask, request, render_template, redirect
 from flask.helpers import url_for
 from bs4 import BeautifulSoup
@@ -41,24 +41,14 @@ def write():
     return render_template("write.html")
 
 
-@app.route("/text", methods=['GET', 'POST'])
-def text():
-    # if request.method == 'GET':
-    #     sql = "SELECT * from board"
-    #     cur.execute(sql)
-    #     data_list = cur.fetchall()
+# @app.route("/view", methods=['GET', 'POST'])
+# def view():
+#     return render_template("view.html")
 
-    #     # beautifulsoup으로 파싱을 해서 값을 가져오면 안되는 듯...
 
-    #     test_list = []
-
-    #     for data in data_list:
-    #         test_list.append(data)
-
-    #     index_num = request.args.get['1']
-    #     print(index_num)
-
-    return render_template("text.html")
+@app.route("/login", methods=['GET', 'POST'])
+def view():
+    return render_template("login.html")
 
 
 if __name__ == "__main__":
