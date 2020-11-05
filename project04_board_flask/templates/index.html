@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/static/styles.css">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}" />
+    <title>Python-board</title>
+</head>
+
+<body>
+    <h1 class="title">글 남겨라!!</h1>
+    <!-- <div>
+        <form action="/login"><button>로그인</button></form>
+    </div> -->
+    <div class="search_box">
+        <input type="text" required name="word"><button>검색</button>
+    </div>
+    <table class="table">
+        <tr>
+            <th class="table_num">번호</th>
+            <th class="table_contents">제목</th>
+            <th class="table_writer">작성자</th>
+            <th class="table_date">작성일</th>
+        </tr>
+        {% for data in data_list %}
+        <tr id="{{data[0]}}">
+            <td>{{data[0]}}</td>
+            <td><a href="/view?id={{data[0]}}" id="{{data[0]}}" >{{data[1]}}</a></td>
+            <td>{{data[3]}}</td>
+            <td>{{data[4]}}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    <div class="pagination">
+        <ul>
+            <li><a href="#">◀</a></li>
+            <li><a href="/?page=1">1</a></li>
+            <li><a href="/?page=2">2</a></li>
+            <li><a href="/?page=3">3</a></li>
+            <li><a href="/?page=4">4</a></li>
+            <li><a href="/?page=5">5</a></li>
+            <li><a href="#">▶</a></li>
+        </ul>
+    </div>
+    <div class="write">
+        <form action="/write">
+            <button class="btn_write">글쓰기</button>
+        </form>
+    </div>
+
+
+</body>
+
+</html>

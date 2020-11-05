@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/static/write_styles.css">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='write_styles.css') }}" />
+    <title>Document</title>
+</head>
+
+<body>
+    <h3>작성하기</h3>
+    <!-- <h4>제목</h4> -->
+    <form name="form" method="POST" action="/write">
+        <h3>제목</h3>
+        <input type="text" name="board_title" id="board_title"></input>
+        <h3>작성자</h3>
+        <input type="text" name="board_writer" id="board_writer"></input>
+        <h3>내용</h3>
+        <input type="text" name="board_text" id="board_text"></input>
+        <input type="submit" id="btn_submit">
+    </form>
+</body>
+
+</html>
